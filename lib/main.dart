@@ -94,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onChanged: (newValue) {
                       setState(() {
                         valueChoose=newValue;
+                        print(valueChoose);
                       });
                     },
                     items: ListItem.map((valueItem){
@@ -163,6 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onChanged: (newValue1) {
                       setState(() {
                         valueChoose1=newValue1;
+                        print(valueChoose1);
                       });
                     },
                     items: ListItem1.map((valueItem1){
@@ -184,23 +186,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: SizedBox(
                     width: double.infinity,
                     height: 50,
-                  child: Expanded(
-                    child: FlatButton(
+                    child: Expanded(
+                      child: FlatButton(
+                        padding: EdgeInsets.all(10.0),
+                        color: Colors.greenAccent,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular((20),),),),
+                        child: Text("Make an Appointment",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),),
 
-                      padding: EdgeInsets.all(10.0),
-                      color: Colors.greenAccent,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular((20),),),),
-                      child: Text("Make an Appointment",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),),
-
-                      onPressed: (){},
+                        onPressed: (){},
+                      ),
                     ),
                   ),
               ),
-                ),
-
             ],
           ),
           // This trailing comma makes auto-formatting nicer for build methods.
@@ -223,6 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (date != null)
       setState(() {
         pickedDate = date;
+        print(pickedDate);
       });
   }
     _pickTime() async {
